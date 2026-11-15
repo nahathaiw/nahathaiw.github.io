@@ -59,8 +59,9 @@ about.html               ← /about/   (bio, skills, experience)
 contact.html             ← /contact/
 assets/css/main.css      ← all styles; tokens at the top, bento grid in "§ Bento"
 assets/js/main.js        ← all interactions
-assets/img/projects/<slug>/   ← images for one project
-assets/img/portrait.jpg       ← owner photo (set owner.photo in _config.yml)
+assets/img/projects/<slug>/   ← images for one project (cover.jpg + screenshots)
+assets/img/home/portrait.jpg  ← owner photo (set owner.photo in _config.yml)
+assets/img/about|journey|contact|gallery/  ← photos for those pages
 assets/files/resume.pdf       ← CV (set owner.resume in _config.yml)
 ```
 
@@ -145,7 +146,7 @@ Layouts only render it.
 | A tool logo                   | `_includes/icons/<name>.svg` + `_data/stack.yml` | SVG from Simple Icons with `aria-hidden="true" fill="currentColor"` added to `<svg>` |
 | Status / availability         | `_config.yml` → `owner.status`, `owner.status_detail` | one word + one short line |
 | Hero text                     | `_config.yml` → `owner.hero_lines` | max 3 lines, each ≤ 24 characters |
-| Photo or CV                   | `assets/img/portrait.jpg`, `assets/files/resume.pdf` + the path in `_config.yml` | portrait 4:5, < 400 KB |
+| Photo or CV                   | `assets/img/home/portrait.jpg`, `assets/files/resume.pdf` + the path in `_config.yml` | portrait 4:5, < 400 KB |
 | Contact links                 | `_config.yml` → `owner.links`  | empty value = link hidden |
 
 ### Adding a new page

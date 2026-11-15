@@ -28,7 +28,7 @@ owner:
     - "EECS student building"
     - "AI + 3D systems."
   timezone: "Asia/Taipei" # used by the live clock
-  photo: ""            # "/assets/img/portrait.jpg" once provided
+  photo: ""            # "/assets/img/home/portrait.jpg" once provided
   resume: ""           # "/assets/files/resume.pdf" once provided
   links:               # empty value = hidden on the site
     email: "nahathai.wong@gmail.com"
