@@ -8,7 +8,7 @@ follow the rules and tell the owner which rule blocked the request.
 
 ## 1. Purpose
 
-A personal portfolio for **Nahathai Wonganawat** (GitHub: `Lazypure`), an EECS
+A personal portfolio for **Nahathai Wonganawat** (GitHub: `nahathaiw`), an EECS
 undergraduate at National Tsing Hua University. It is used for **internship and
 job applications**, so the reader is usually a recruiter or engineer who skims for
 30–60 seconds.
@@ -32,7 +32,7 @@ Every tile with a ↗ button opens a **full page** with the details.
   Never hot-link images from other sites.
 
 Preview locally: `jekyll serve` → http://localhost:4000 (no `baseurl`; the repo is
-`Lazypure.github.io`).
+`nahathaiw.github.io`).
 
 ## 3. File map
 

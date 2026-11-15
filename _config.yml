@@ -32,7 +32,7 @@ owner:
   resume: ""           # "/assets/files/resume.pdf" once provided
   links:               # empty value = hidden on the site
     email: "nahathai.wong@gmail.com"
-    github: "https://github.com/Lazypure"
+    github: "https://github.com/nahathaiw"
     linkedin: "https://www.linkedin.com/in/nahathai-wonganawat/"
 
 collections:
