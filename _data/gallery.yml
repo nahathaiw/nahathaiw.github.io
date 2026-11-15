@@ -1,0 +1,3 @@
+# Gallery photos. src in /assets/img/gallery/, alt required, caption <= 12 words.
+# Empty list = gallery section hidden.
+[]

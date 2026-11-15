@@ -1,0 +1,55 @@
+# Site settings. Content about the owner lives under `owner`.
+title: "Nahathai Wonganawat"
+description: "EECS student at NTHU building AI systems and immersive 3D experiences."
+url: "https://nahathaiw.github.io"
+baseurl: ""
+lang: en
+
+owner:
+  name: "Nahathai Wonganawat"
+  short_name: "Nahathai"
+  headline: "EECS student building AI systems and immersive 3D experiences."
+  location: "Hsinchu, Taiwan"
+  school: "National Tsing Hua University"
+  degree: "B.S. Interdisciplinary Program of EECS"
+  graduation: "Expected Jun 2027"
+  about: >-
+    I study Electrical Engineering and Computer Science at NTHU and work as a
+    research assistant at the AIINS Lab, where I help build a pipeline that turns
+    text and speech into animated 3D avatars. I also build LLM tools and
+    full-stack apps, and I lead the EECS Global Student Association. Outside the lab I am
+    outgoing and usually running, playing golf or playing soccer.
+  # TODO owner: rewrite `about` in your own voice (draft built only from the CV).
+  availability: "Open to internships in AI/ML, research and software engineering."
+  status: "Available"
+  status_detail: "Spring & Summer 2027 internships"
+  hero_lines:            # big hero text on the home tile, one line each, no emoji
+    - "Hello: I'm Nahathai."
+    - "EECS student building"
+    - "AI + 3D systems."
+  timezone: "Asia/Taipei" # used by the live clock
+  photo: ""            # "/assets/img/portrait.jpg" once provided
+  resume: ""           # "/assets/files/resume.pdf" once provided
+  links:               # empty value = hidden on the site
+    email: "nahathai.wong@gmail.com"
+    github: "https://github.com/Lazypure"
+    linkedin: "https://www.linkedin.com/in/nahathai-wonganawat/"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+  - scope: { path: "" }
+    values: { layout: default }
+
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - README.md
+  - _projects/_template.md
+  - Gemfile
+  - Gemfile.lock

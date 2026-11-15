@@ -1,0 +1,58 @@
+# Experience, NEWEST FIRST. kind: research | work | leadership. points: 2-4.
+- kind: research
+  role: "Summer Research Intern"
+  org: "AIINS Lab, NTHU"
+  period: "Jul – Sep 2026"
+  place: "Hsinchu"
+  points:
+    - "Investigated codec design to reduce the size and bandwidth needs of 3D Gaussian Splatting for network transmission."
+    - "Compared Self-Organizing Gaussians (SOG) and KISS-GS on coding design, compression efficiency and decoding speed."
+    - "Outlined benchmarking criteria for real-time 3DGS streaming and set up a Linux/NVIDIA GPU research environment."
+- kind: research
+  role: "Research Assistant"
+  org: "AIINS Lab, NTHU · Prof. Cheng-Hsin Hsu"
+  period: "2025 – Present"
+  place: "Hsinchu"
+  points:
+    - "Co-developed a six-stage text/speech-to-animated-3DGS avatar pipeline (Whisper, Llama 3.2, diffusion motion, HUGS)."
+    - "Profiled 120-frame runs; in the evaluated foreground-only scene, per-frame data fell from 637 MB to 101.7 MB (~6.3×)."
+    - "Co-authored an accepted ACM ImmerCom 2026 paper and presented it at ACM MobiCom 2026."
+- kind: leadership
+  role: "President"
+  org: "EECS Global Student Association, NTHU"
+  period: "May 2025 – Present"
+  place: "Hsinchu"
+  points:
+    - "Lead a 20+ person international team spanning five countries."
+    - "Developed a sponsorship strategy; reported a 500% increase in funding and 10+ events a year."
+    - "Built partnerships with ITRI, CakeResume, CBTalent, Wemo, Rawstone and Ranictek."
+- kind: work
+  role: "English Teacher (Part-Time)"
+  org: "Dickson Educational Cram School"
+  period: "Mar – Jun 2025"
+  place: "Taiwan"
+  points:
+    - "Delivered structured English lessons to learners with different proficiency levels."
+- kind: work
+  role: "Hotel Operations Intern"
+  org: "Foxwoods Resort Casino"
+  period: "Mar – May 2023"
+  place: "Connecticut, USA"
+  points:
+    - "Handled check-ins, reservations, billing and guest support using Oracle OPERA Cloud."
+- kind: leadership
+  role: "Founder"
+  org: "YouTHful Issue — PM2.5 Awareness Campaign"
+  period: "2023"
+  place: "Thailand"
+  points:
+    - "Initiated a national air-pollution awareness competition backed by ThaiHealth and Bangkok City."
+    - "Raised about THB 400,000 in public-sector funding and coordinated a team of 50+."
+- kind: work
+  role: "Equity Analyst Intern"
+  org: "Syrius Systematica Ltd."
+  period: "Mar – Aug 2022"
+  place: ""   # TODO owner: confirm Hong Kong vs Thailand
+  points:
+    - "Ran technical analysis of U.S. and Chinese equities across fintech, EV, crypto and biotech."
+    - "Prepared weekly risk/exposure reports and investor-facing fund factsheets."

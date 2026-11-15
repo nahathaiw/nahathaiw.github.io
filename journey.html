@@ -1,0 +1,21 @@
+---
+layout: page
+title: Journey
+permalink: /journey/
+kicker: "Journey"
+heading: "Thailand → USA → Taiwan → Austin"
+summary: "The milestones that got me here, newest first."
+---
+{%- comment -%} Entries come from _data/timeline.yml (AGENTS.md §6). {%- endcomment -%}
+<ol class="tile timeline">
+  {% for t in site.data.timeline %}
+  <li class="timeline-item" data-reveal>
+    <p class="timeline-year">{{ t.year }}</p>
+    <div>
+      <p class="kicker">{{ t.place }}</p>
+      <h2 class="h-md">{{ t.title }}</h2>
+      <p class="small">{{ t.text }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ol>

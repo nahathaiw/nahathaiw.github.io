@@ -1,0 +1,25 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+kicker: "Say hello"
+heading: "Let's work together"
+summary: "Open to internships in AI/ML, research and software engineering. Email is the fastest way to reach me."
+---
+{% assign o = site.owner %}
+<ul class="contact-grid">
+  {% if o.links.email != "" %}
+  <li class="tile contact-tile">
+    <span class="kicker">Email</span>
+    <a class="h-md contact-value" href="mailto:{{ o.links.email }}">{{ o.links.email }}</a>
+    <button class="chip" type="button" data-copy="{{ o.links.email }}">Copy</button>
+  </li>
+  {% endif %}
+  {% if o.links.linkedin != "" %}
+  <li class="tile contact-tile"><span class="kicker">LinkedIn</span><a class="h-md contact-value" href="{{ o.links.linkedin }}" target="_blank" rel="noopener">in/nahathai-wonganawat ↗</a></li>
+  {% endif %}
+  {% if o.links.github != "" %}
+  <li class="tile contact-tile"><span class="kicker">GitHub</span><a class="h-md contact-value" href="{{ o.links.github }}" target="_blank" rel="noopener">github.com/Lazypure ↗</a></li>
+  {% endif %}
+  <li class="tile contact-tile"><span class="kicker">Based in</span><span class="h-md contact-value">{{ o.location }} · GMT+8</span></li>
+</ul>

@@ -1,0 +1,11 @@
+# Skill groups. No ratings or percentages.
+- group: "Languages"
+  items: [Python, C++, JavaScript, TypeScript, C, Java]
+- group: "AI & Research"
+  items: [LLM applications, RAG, Tool calling, 3D Gaussian Splatting, 3D rendering, Profiling]
+- group: "Web & Backend"
+  items: [React, React Native, FastAPI, Streamlit, Firebase, Supabase]
+- group: "Tools"
+  items: [Git, Linux, Docker, Figma, Photoshop]
+- group: "Spoken"
+  items: [Thai (native), English (TOEIC 975), Mandarin (intermediate)]

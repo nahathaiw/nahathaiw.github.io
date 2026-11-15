@@ -1,0 +1,14 @@
+# Logos in the "Tools" tile. icon = file name in _includes/icons/ (from Simple Icons, CC0).
+# To add one: drop <name>.svg into _includes/icons/ and add a line here.
+- { name: Python, icon: python }
+- { name: C++, icon: cplusplus }
+- { name: TypeScript, icon: typescript }
+- { name: React, icon: react }
+- { name: FastAPI, icon: fastapi }
+- { name: Streamlit, icon: streamlit }
+- { name: Firebase, icon: firebase }
+- { name: Supabase, icon: supabase }
+- { name: Docker, icon: docker }
+- { name: Linux, icon: linux }
+- { name: Git, icon: git }
+- { name: Figma, icon: figma }

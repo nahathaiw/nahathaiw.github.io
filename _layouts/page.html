@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{%- comment -%} Simple inner page: a header tile, then the page content. {%- endcomment -%}
+<div class="page-grid">
+  <header class="tile page-head">
+    <p class="kicker">{{ page.kicker | default: page.title }}</p>
+    <h1 class="h-xl">{{ page.heading | default: page.title }}</h1>
+    {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+  </header>
+  {{ content }}
+</div>

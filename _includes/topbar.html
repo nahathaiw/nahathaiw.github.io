@@ -1,0 +1,13 @@
+{%- comment -%} Top bar for inner pages (the home page is its own bento grid). {%- endcomment -%}
+<header class="topbar tile">
+  <a class="topbar-home" href="{{ '/' | relative_url }}" aria-label="Back to home">{% include monogram.html %}<span>Nahathai W.</span></a>
+  <nav aria-label="Main">
+    <ul class="topbar-links">
+      <li><a href="{{ '/projects/' | relative_url }}"{% if page.url contains '/projects/' %} aria-current="page"{% endif %}>Work</a></li>
+      <li><a href="{{ '/journey/' | relative_url }}"{% if page.url == '/journey/' %} aria-current="page"{% endif %}>Journey</a></li>
+      <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}"{% if page.url == '/contact/' %} aria-current="page"{% endif %}>Contact</a></li>
+    </ul>
+  </nav>
+  <button class="theme-mini" type="button" data-theme-toggle aria-label="Switch light or dark mode">{% include theme-icon.html %}</button>
+</header>

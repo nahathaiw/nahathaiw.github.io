@@ -1,0 +1,53 @@
+---
+layout: page
+title: About
+permalink: /about/
+kicker: "About"
+heading: "Nahathai Wonganawat"
+---
+{% assign o = site.owner %}
+<div class="about-grid">
+  <div class="tile about-text">
+    <p class="kicker">In short</p>
+    <p class="lede">{{ o.about }}</p>
+    <dl class="facts">
+      <div><dt class="kicker">Studying</dt><dd>{{ o.degree }}, {{ o.school }}</dd></div>
+      <div><dt class="kicker">Graduating</dt><dd>{{ o.graduation }}</dd></div>
+      <div><dt class="kicker">Based in</dt><dd>{{ o.location }}</dd></div>
+    </dl>
+    {% if o.resume != "" %}<p><a class="pill" href="{{ o.resume | relative_url }}" target="_blank" rel="noopener">Download CV (PDF) ↗</a></p>{% endif %}
+  </div>
+
+  <div class="tile skills-tile">
+    <p class="kicker">Skills</p>
+    {% for g in site.data.skills %}
+    <div class="skill-group">
+      <p class="small">{{ g.group }}</p>
+      <p class="tags">{% for s in g.items %}<span>{{ s }}</span>{% endfor %}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<section class="tile xp-tile" aria-labelledby="xp-h">
+  <div class="archive-head">
+    <h2 id="xp-h" class="h-md">Experience &amp; leadership</h2>
+    <div class="filters" role="group" aria-label="Filter experience">
+      <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="research" aria-pressed="false">Research</button>
+      <button class="chip" type="button" data-filter="work" aria-pressed="false">Work</button>
+      <button class="chip" type="button" data-filter="leadership" aria-pressed="false">Leadership</button>
+    </div>
+  </div>
+  <ul class="xp-list" data-filter-list>
+    {% for x in site.data.experience %}
+    <li class="xp-item" data-kind="{{ x.kind }}">
+      <div class="xp-meta"><p class="kicker">{{ x.period }}</p>{% if x.place != "" %}<p class="small">{{ x.place }}</p>{% endif %}</div>
+      <div>
+        <h3 class="xp-role">{{ x.role }} <span class="muted">· {{ x.org }}</span></h3>
+        <ul class="xp-points">{% for pt in x.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

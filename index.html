@@ -1,0 +1,106 @@
+---
+layout: default
+home: true
+---
+{%- comment -%}
+  Home = one bento grid. Each tile is an element with class "tile" and a
+  data-area that matches a name in the grid-template-areas in main.css (§ Bento).
+  Text comes from _config.yml (owner), _data/*.yml and _projects/. See AGENTS.md §5–§7.
+{%- endcomment -%}
+{% assign o = site.owner %}
+{% assign featured = site.projects | where: "featured", true | sort: "order" %}
+
+<div class="bento">
+
+  <section class="tile tile-hero" data-area="hero" aria-label="Introduction">
+    <div class="hero-top">
+      {% include monogram.html %}
+      <p class="clock" data-clock data-tz="{{ o.timezone }}" aria-label="Local time in Taipei">
+        <span class="clock-day">Taipei</span>
+        <span class="clock-time">--:--</span>
+      </p>
+    </div>
+    <h1 class="hero-text">{% for line in o.hero_lines %}<span>{{ line }}</span>{% endfor %}</h1>
+    <ul class="hero-links">
+      {% if o.links.linkedin != "" %}<li><a href="{{ o.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>{% endif %}
+      {% if o.links.github != "" %}<li><a href="{{ o.links.github }}" target="_blank" rel="noopener">GitHub</a></li>{% endif %}
+      {% if o.links.email != "" %}<li><a href="mailto:{{ o.links.email }}">Email</a></li>{% endif %}
+      {% if o.resume != "" %}<li><a href="{{ o.resume | relative_url }}" target="_blank" rel="noopener">Resume</a></li>{% endif %}
+    </ul>
+  </section>
+
+  <div class="tile tile-photo" data-area="photo">
+    {% if o.photo != "" %}
+      <img src="{{ o.photo | relative_url }}" alt="Portrait of {{ o.name }}">
+    {% else %}
+      <div class="placeholder portrait-placeholder" role="img" aria-label="Portrait placeholder">
+        {% include monogram.html %}
+        <span class="kicker">Portrait · coming soon</span>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="tile tile-status" data-area="status">
+    <p class="kicker">Status</p>
+    <p class="status-line"><span class="pulse" aria-hidden="true"></span>{{ o.status }}</p>
+    <p class="small">{{ o.status_detail }}</p>
+  </div>
+
+  <button class="tile tile-theme" data-area="theme" type="button" data-theme-toggle>
+    {% include theme-icon.html %}
+    <span class="theme-label" data-theme-label>Switch to dark mode</span>
+  </button>
+
+  <a class="tile link-tile tile-hello" data-area="hello" href="{{ '/contact/' | relative_url }}">
+    <span class="kicker">Say hello</span>
+    <span class="h-lg">Let's work together</span>
+    {% include arrow.html %}
+  </a>
+
+  <a class="tile link-tile" data-area="work" href="{{ '/projects/' | relative_url }}">
+    <span class="kicker">Work</span>
+    <span class="h-md">View my work</span>
+    {% include arrow.html %}
+  </a>
+
+  <a class="tile link-tile" data-area="about" href="{{ '/about/' | relative_url }}">
+    <span class="kicker">About</span>
+    <span class="h-md">CV, experience &amp; skills</span>
+    {% include arrow.html %}
+  </a>
+
+  <a class="tile link-tile tile-journey" data-area="journey" href="{{ '/journey/' | relative_url }}">
+    <span class="kicker">Journey</span>
+    <span class="h-md">Thailand → USA → Taiwan → Austin</span>
+    <ol class="mini-timeline">
+      {% for t in site.data.timeline limit: 3 %}
+      <li><span class="mini-year">{{ t.year }}</span><span>{{ t.title }}</span></li>
+      {% endfor %}
+    </ol>
+    {% include arrow.html %}
+  </a>
+
+  <a class="tile link-tile tile-research" data-area="research" href="{{ '/projects/' | relative_url }}">
+    <span class="kicker">Key projects &amp; research</span>
+    <span class="h-md">Published at ACM ImmerCom 2026</span>
+    <span class="thumbs">
+      {% for p in featured limit: 3 %}
+      <span class="thumb">{% if p.cover != "" and p.cover %}<img src="{{ p.cover | relative_url }}" alt="" loading="lazy">{% else %}<span class="thumb-text">{{ p.title }}</span>{% endif %}</span>
+      {% endfor %}
+    </span>
+    {% include arrow.html %}
+  </a>
+
+  <div class="tile tile-stack" data-area="stack">
+    <p class="kicker">Tools I use</p>
+    <p class="h-md">My daily stack</p>
+    <div class="logo-rail" aria-label="Tools: {{ site.data.stack | map: 'name' | join: ', ' }}">
+      <ul class="logo-track">
+        {% for rep in (1..2) %}{% for s in site.data.stack %}
+        <li class="logo-chip" title="{{ s.name }}"{% if rep == 2 %} aria-hidden="true"{% endif %}>{% include icons/{{ s.icon }}.svg %}</li>
+        {% endfor %}{% endfor %}
+      </ul>
+    </div>
+  </div>
+
+</div>
