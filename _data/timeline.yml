@@ -3,6 +3,11 @@
   place: "Austin, Texas"
   title: "Presenting at ACM MobiCom"
   text: "Presented our text-to-3DGS avatar research at ACM MobiCom 2026, with an N2Women travel grant. The paper was accepted at the ACM ImmerCom 2026 workshop."
+  photos:                # optional; files in assets/img/journey/, alt required
+    - src: "/assets/img/journey/mobicom-poster.jpg"
+      alt: "Nahathai presenting her research poster at ACM MobiCom 2026 in Austin"
+    - src: "/assets/img/journey/mobicom-austin-star.jpg"
+      alt: "Nahathai jumping under a large star sculpture in Austin, Texas"
 - year: "2026"
   place: "Hsinchu"
   title: "Summer research on 3DGS compression"

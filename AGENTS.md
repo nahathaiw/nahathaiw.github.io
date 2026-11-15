@@ -141,7 +141,7 @@ Layouts only render it.
 | I want to add…                | Edit this file                 | Format / rule |
 |-------------------------------|--------------------------------|---------------|
 | A job, research role, club    | `_data/experience.yml`         | `kind` (research \| work \| leadership), `role`, `org`, `period`, `place`, `points` (2–4) |
-| A journey milestone           | `_data/timeline.yml`           | `year`, `place`, `title` (≤ 40 chars), `text` (≤ 30 words). Newest first. |
+| A journey milestone           | `_data/timeline.yml`           | `year`, `place`, `title` (≤ 40 chars), `text` (≤ 30 words), optional `photos` (list of `src` + `alt`, files in `assets/img/journey/`). Newest first. |
 | A skill                       | `_data/skills.yml`             | add to the right `group`; no ratings or percentages |
 | A tool logo                   | `_includes/icons/<name>.svg` + `_data/stack.yml` | SVG from Simple Icons with `aria-hidden="true" fill="currentColor"` added to `<svg>` |
 | Status / availability         | `_config.yml` → `owner.status`, `owner.status_detail` | one word + one short line |
