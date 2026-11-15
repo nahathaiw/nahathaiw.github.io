@@ -8,11 +8,12 @@ layout: default
     <p class="kicker">{{ page.category }} · {{ page.period }}</p>
     <h1 class="h-xl">{{ page.title }}</h1>
     <p class="lede">{{ page.summary }}</p>
-    {% if page.links.repo != "" or page.links.demo != "" or page.links.paper != "" %}
+    {% if page.links.repo != "" or page.links.demo != "" or page.links.paper != "" or page.links.poster != "" %}
     <p class="btn-row">
       {% if page.links.repo != "" and page.links.repo %}<a class="pill" href="{{ page.links.repo }}" target="_blank" rel="noopener">Code ↗</a>{% endif %}
       {% if page.links.demo != "" and page.links.demo %}<a class="pill" href="{{ page.links.demo }}" target="_blank" rel="noopener">Live demo ↗</a>{% endif %}
       {% if page.links.paper != "" and page.links.paper %}<a class="pill" href="{{ page.links.paper }}" target="_blank" rel="noopener">Paper ↗</a>{% endif %}
+      {% if page.links.poster != "" and page.links.poster %}<a class="pill" href="{{ page.links.poster | relative_url }}" target="_blank" rel="noopener">Poster (PDF) ↗</a>{% endif %}
     </p>
     {% endif %}
   </header>

@@ -14,6 +14,7 @@ links:
   repo: ""
   demo: ""
   paper: "https://doi.org/10.1145/3842656.3843821"
+  poster: "/assets/files/mobicom-2026-poster.pdf"
 ---
 
 ## Overview

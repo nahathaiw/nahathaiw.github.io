@@ -1,13 +1,20 @@
 # Journey milestones, NEWEST FIRST. text <= 30 words. Facts from the owner's CV only.
 - year: "2026"
   place: "Austin, Texas"
-  title: "Presenting at ACM MobiCom"
+  title: "Presenting at ACM MobiCom 2026, ImmerCom 2026"
   text: "Presented our text-to-3DGS avatar research at ACM MobiCom 2026, with an N2Women travel grant. The paper was accepted at the ACM ImmerCom 2026 workshop."
   photos:                # optional; files in assets/img/journey/, alt required
     - src: "/assets/img/journey/mobicom-poster.jpg"
       alt: "Nahathai presenting her research poster at ACM MobiCom 2026 in Austin"
     - src: "/assets/img/journey/mobicom-austin-star.jpg"
       alt: "Nahathai jumping under a large star sculpture in Austin, Texas"
+  links:                 # optional; label + url
+    - label: "Paper"
+      url: "https://doi.org/10.1145/3842656.3843821"
+    - label: "Poster (PDF)"
+      url: "/assets/files/mobicom-2026-poster.pdf"
+    - label: "Project"
+      url: "/projects/text-to-3dgs-avatars/"
 - year: "2026"
   place: "Hsinchu"
   title: "Summer research on 3DGS compression"
@@ -28,6 +35,9 @@
   place: "Thailand"
   title: "Founding YouTHful Issue"
   text: "Started a national PM2.5 air-pollution awareness competition, raised about THB 400,000 in public funding and coordinated a team of 50+."
+  links:
+    - label: "Instagram"
+      url: "https://www.instagram.com/youthful_issue/"
 - year: "2022"
   place: "Thailand"
   title: "First engineering steps"

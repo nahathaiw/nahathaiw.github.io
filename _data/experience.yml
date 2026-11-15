@@ -51,8 +51,10 @@
 - kind: work
   role: "Equity Analyst Intern"
   org: "Syrius Systematica Ltd."
+  logo: "/assets/img/about/syrius-logo.png"   # optional; square, in assets/img/about/
   period: "Mar – Aug 2022"
-  place: ""   # TODO owner: confirm Hong Kong vs Thailand
+  place: "Hong Kong"
   points:
-    - "Ran technical analysis of U.S. and Chinese equities across fintech, EV, crypto and biotech."
-    - "Prepared weekly risk/exposure reports and investor-facing fund factsheets."
+    - "Wrote monthly, weekly and daily technical analysis of U.S. and Chinese equities and ETFs."
+    - "Covered sectors including EV, alternative energy, fintech, biotech, semiconductors, cloud, crypto and FAANG."
+    - "Produced quarterly fund factsheets and weekly risk/exposure reports."

@@ -15,6 +15,11 @@ summary: "The milestones that got me here, newest first."
       <p class="kicker">{{ t.place }}</p>
       <h2 class="h-md">{{ t.title }}</h2>
       <p class="small">{{ t.text }}</p>
+      {% if t.links %}
+      <p class="btn-row">
+        {% for l in t.links %}{% assign ext = l.url | slice: 0, 4 %}<a class="pill" href="{{ l.url | relative_url }}"{% if ext == "http" or l.url contains ".pdf" %} target="_blank" rel="noopener"{% endif %}>{{ l.label }} ↗</a>{% endfor %}
+      </p>
+      {% endif %}
       {% if t.photos %}
       <div class="timeline-photos">
         {% for ph in t.photos %}<img src="{{ ph.src | relative_url }}" alt="{{ ph.alt }}" loading="lazy">{% endfor %}

@@ -42,7 +42,7 @@ heading: "Nahathai Wonganawat"
   <ul class="xp-list" data-filter-list>
     {% for x in site.data.experience %}
     <li class="xp-item" data-kind="{{ x.kind }}">
-      <div class="xp-meta"><p class="kicker">{{ x.period }}</p>{% if x.place != "" %}<p class="small">{{ x.place }}</p>{% endif %}</div>
+      <div class="xp-meta">{% if x.logo %}<img class="xp-logo" src="{{ x.logo | relative_url }}" alt="{{ x.org }} logo" width="48" height="48" loading="lazy">{% endif %}<p class="kicker">{{ x.period }}</p>{% if x.place != "" %}<p class="small">{{ x.place }}</p>{% endif %}</div>
       <div>
         <h3 class="xp-role">{{ x.role }} <span class="muted">· {{ x.org }}</span></h3>
         <ul class="xp-points">{% for pt in x.points %}<li>{{ pt }}</li>{% endfor %}</ul>

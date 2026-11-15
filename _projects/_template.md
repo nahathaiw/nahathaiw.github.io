@@ -14,6 +14,7 @@ links:
   repo: ""
   demo: ""
   paper: ""
+  poster: ""
 ---
 
 ## Overview

@@ -112,6 +112,7 @@ Layouts only render it.
      repo: ""
      demo: ""
      paper: ""
+     poster: ""                         # PDF in /assets/files/
    ---
    ```
 
@@ -140,8 +141,8 @@ Layouts only render it.
 
 | I want to add…                | Edit this file                 | Format / rule |
 |-------------------------------|--------------------------------|---------------|
-| A job, research role, club    | `_data/experience.yml`         | `kind` (research \| work \| leadership), `role`, `org`, `period`, `place`, `points` (2–4) |
-| A journey milestone           | `_data/timeline.yml`           | `year`, `place`, `title` (≤ 40 chars), `text` (≤ 30 words), optional `photos` (list of `src` + `alt`, files in `assets/img/journey/`). Newest first. |
+| A job, research role, club    | `_data/experience.yml`         | `kind` (research \| work \| leadership), `role`, `org`, optional `logo` (square image in `assets/img/about/`), `period`, `place`, `points` (2–4) |
+| A journey milestone           | `_data/timeline.yml`           | `year`, `place`, `title` (≤ 40 chars), `text` (≤ 30 words), optional `photos` (list of `src` + `alt`, files in `assets/img/journey/`), optional `links` (list of `label` + `url`). Newest first. |
 | A skill                       | `_data/skills.yml`             | add to the right `group`; no ratings or percentages |
 | A tool logo                   | `_includes/icons/<name>.svg` + `_data/stack.yml` | SVG from Simple Icons with `aria-hidden="true" fill="currentColor"` added to `<svg>` |
 | Status / availability         | `_config.yml` → `owner.status`, `owner.status_detail` | one word + one short line |
@@ -191,7 +192,8 @@ Light is the default; dark comes from the toggle (`data-theme="dark"`).
   and `{% include arrow.html %}` (the round ↗ button, bottom-right).
 - Gap between tiles is always `var(--gap)` (10px). The black frame shows in the gaps.
 - Only one tile per page may use `--solid` (the theme switch on home).
-- Images inside tiles are grayscale (`filter: grayscale(1)`).
+- Images inside tiles are grayscale (`filter: grayscale(1)`), except Journey
+  photos (`.timeline-photos`), which keep their original color (owner request).
 
 **Adding a home tile** (rare; ask the owner first)
 1. Add the tile in `index.html` with a new `data-area="<name>"`.
