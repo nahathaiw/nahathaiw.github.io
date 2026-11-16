@@ -330,5 +330,6 @@ The rules are written so the same repo can grow or be copied:
   ("Presenting at ACM MobiCom 2026, ImmerCom 2026",
   "Summer research intern on 3DGS compression").
 - Ongoing roles use present tense in bullets (§4.4).
+- "TOCFL Vocab Practice" has 4 "What I learned" bullets (limit 1–3) at the owner's request.
 - The main contact email is `nahathai.wong@gmail.com`; the MobiCom poster PDF
   shows the university email and is left as published.

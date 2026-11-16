@@ -43,3 +43,10 @@ practice modes that run in any browser, with English meanings for every level.
 ## Results
 
 Not yet measured.
+
+## What I learned
+
+- Learned to turn a large official word list into structured data that can be filtered by level, topic and part of speech.
+- Learned how the browser's speech engine (Web Speech API) works, and that available voices differ by device, so I added a voice picker and a Taiwan voice preference.
+- Learned to build an app with no server: one HTML file on GitHub Pages, with progress saved in the browser.
+- Learned to ship in small versions: the commit history goes from v1 to v11, each adding one feature.
