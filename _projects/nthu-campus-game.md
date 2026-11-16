@@ -13,13 +13,14 @@ cover: ""
 links:
   repo: "https://github.com/nahathaiw/final_nthu"
   demo: ""
+  video: "https://www.youtube.com/watch?v=UtH5NtKcpE4"
   paper: ""
   poster: ""
 ---
 
 ## Overview
 
-A team-built 2D adventure game set on the NTHU campus. Players walk the campus map,
+A team-built 2D adventure game set on the NTHU campus, made as the final project for the Software Studio course. Players walk the campus map,
 talk to characters, enter buildings and complete themed mini-games, with accounts,
 scores and leaderboards stored in Firebase.
 

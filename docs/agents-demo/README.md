@@ -40,6 +40,6 @@ from the existing templates.
 
 ## TODO for owner
 
-- Live demo URL (Firebase Hosting), if still online → `links.demo`.
+- ~~Demo link~~ done: YouTube demo video added as a new optional `links.video` field (§11).
 - "What I learned" (1–3 bullets).
 - A gameplay screenshot → `assets/img/projects/nthu-campus-game/cover.jpg`.

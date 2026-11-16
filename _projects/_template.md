@@ -13,6 +13,7 @@ cover: ""
 links:
   repo: ""
   demo: ""
+  video: ""
   paper: ""
   poster: ""
 ---

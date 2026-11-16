@@ -140,6 +140,7 @@ Layouts only render it.
    links:                               # "" if none; never guess URLs
      repo: ""
      demo: ""
+     video: ""                          # recorded demo (e.g. YouTube); demo = playable site
      paper: ""
      poster: ""                         # PDF in /assets/files/
    ---
