@@ -51,5 +51,6 @@ exclude:
   - CLAUDE.md
   - README.md
   - _projects/_template.md
+  - docs
   - Gemfile
   - Gemfile.lock

@@ -90,6 +90,7 @@ assets/img/about|journey|contact|gallery/  ← photos for those pages
 assets/files/resume.pdf       ← CV (set owner.resume in _config.yml)
 assets/files/<event>-<year>-poster.pdf ← posters / slides linked from pages
 ../original-photos/           ← full-size originals, OUTSIDE the repo (never commit)
+docs/                         ← notes and demo evidence (excluded from the site)
 ```
 
 **Never** put content (text about her) inside layouts, includes, CSS or JS. Content
