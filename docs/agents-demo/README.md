@@ -9,8 +9,6 @@ Evidence that an AI agent can extend this site using only the rules in
 > Following AGENTS.md, add a project page for my NTHU campus game
 > (repo: https://github.com/nahathaiw/final_nthu).
 
-Screenshot of the prompt: `prompt.png` (added by the owner).
-
 ## What the agent did, rule by rule
 
 | Step | Rule in AGENTS.md | Result |
@@ -20,7 +18,7 @@ Screenshot of the prompt: `prompt.png` (added by the owner).
 | Copied `_projects/_template.md`, filled front matter in the fixed order | §5.2 | `_projects/nthu-campus-game.md` |
 | Took facts only from the repo README and commit history; the repo has 4+ contributors, so "What I did" lists only the owner's own commits | §4.1 | no invented facts |
 | Left out student IDs that appear in the repo's git history | §4.2 | no private data |
-| Wrote the body headings in order; Results = "Not yet measured."; skipped "What I learned" instead of inventing it | §5.3 | |
+| Wrote the body headings in order; Results = "Not yet measured."; left "What I learned" out until the owner chose the points | §5.3 | |
 | `featured: false`, because 4 projects are already featured | §5.4 | |
 | No cover yet, so the layout shows the "Screenshot coming soon" placeholder | §5.5 | |
 | Did not edit `index.html` or `projects/index.html`; the Work page lists the project automatically | §5.6 | see `result-work-page.png` |
@@ -41,5 +39,5 @@ from the existing templates.
 ## TODO for owner
 
 - ~~Demo link~~ done: YouTube demo video added as a new optional `links.video` field (§11).
-- "What I learned" (1–3 bullets).
+- ~~"What I learned"~~ done: drafted by the agent from the owner's commits, owner chose 3 of 6.
 - A gameplay screenshot → `assets/img/projects/nthu-campus-game/cover.jpg`.

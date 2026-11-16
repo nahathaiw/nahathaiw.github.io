@@ -43,3 +43,9 @@ scores and leaderboards stored in Firebase.
 ## Results
 
 Not yet measured.
+
+## What I learned
+
+- Learned how physics and colliders change how a game feels, and when to turn physics off: the practice mode played better without it.
+- Learned to work in a shared Git repo with a four-person team: pulling often, merging branches and resolving conflicts in shared project files.
+- Learned that documentation matters after a project ends: rewriting the README made the project clear to people outside the team.
