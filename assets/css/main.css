@@ -262,6 +262,7 @@ button { font: inherit; color: inherit; }
 .meta dd { margin-top: 4px; font-size: 14px; }
 .media-tile { padding: 10px; }
 .media-tile img, .media-tile .placeholder { border-radius: 14px; aspect-ratio: 16 / 7; width: 100%; object-fit: cover; }
+.media-tile img { object-position: 50% 0; }
 .next { padding-block: 28px 72px; }
 
 .prose { padding-block: 32px; }

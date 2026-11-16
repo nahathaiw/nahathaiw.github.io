@@ -161,7 +161,8 @@ Layouts only render it.
    research" tile shows the first 3 by `order`. If a 5th would be featured, ask
    the owner which one to un-feature.
 5. Images go in `assets/img/projects/<slug>/`. `cover.jpg` is landscape,
-   1600×900, < 300 KB. Every image needs alt text. Without a cover, the layout
+   1600×900, < 300 KB. Cards show it at 16:9; the project page crops it to 16:7
+   from the top, so keep the key content (e.g. an app's title bar) in the upper part. Every image needs alt text. Without a cover, the layout
    shows a striped "Screenshot coming soon" placeholder automatically. No stock
    photos and no AI-generated images of her.
 6. Do **not** edit `index.html` or `projects/index.html` to add a project; they
