@@ -6,6 +6,28 @@ follow the rules and tell the owner which rule blocked the request.
 
 ---
 
+## 0. Workflow for every request (read this first)
+
+1. **Classify the request** with the table in §6 (project, journey milestone,
+   job, skill, photo, link, new page…). The table names the one file to edit.
+2. **Edit content, not code.** Almost every request is solved by editing
+   `_config.yml`, a file in `_data/`, or a file in `_projects/`. Touch layouts,
+   CSS or JS only when a field must be *displayed in a new way*, and then add it
+   as an **optional** field so old entries keep working (see §6 examples).
+3. **Check the facts.** Use only the owner's words (§4). Missing info → leave the
+   field empty and report `TODO for owner:`. Rewrite pasted text to the house
+   style (§4.4) and say what you shortened.
+4. **Preview** with `jekyll serve --livereload` (§2) and open the changed page.
+5. **Run the checklist** in §9.
+6. **Report** what changed, where (file path), and any TODOs or rule conflicts.
+7. **Commit and push only when the owner asks.** Message: short imperative
+   title ("Add …", "Update …") + bullet list of changes.
+
+If the owner explicitly overrides a rule, do it, then record the exception in
+§12 so the next agent keeps it.
+
+---
+
 ## 1. Purpose
 
 A personal portfolio for **Nahathai Wonganawat** (GitHub: `nahathaiw`), an EECS
@@ -31,8 +53,11 @@ Every tile with a ↗ button opens a **full page** with the details.
 - Tool logos are inline SVGs in `_includes/icons/` (from Simple Icons, CC0).
   Never hot-link images from other sites.
 
-Preview locally: `jekyll serve` → http://localhost:4000 (no `baseurl`; the repo is
-`nahathaiw.github.io`).
+Preview locally: `jekyll serve --livereload` → http://localhost:4000 (no `baseurl`;
+the repo is `nahathaiw.github.io`, live at https://nahathaiw.github.io).
+On macOS use Homebrew Ruby (`brew install ruby`, then `gem install jekyll`); the
+system Ruby 2.6 is too old. Restart the server after editing `_config.yml`.
+GitHub Pages builds with Jekyll 3.10, so use only basic Liquid features.
 
 ## 3. File map
 
@@ -63,6 +88,8 @@ assets/img/projects/<slug>/   ← images for one project (cover.jpg + screenshot
 assets/img/home/portrait.jpg  ← owner photo (set owner.photo in _config.yml)
 assets/img/about|journey|contact|gallery/  ← photos for those pages
 assets/files/resume.pdf       ← CV (set owner.resume in _config.yml)
+assets/files/<event>-<year>-poster.pdf ← posters / slides linked from pages
+../original-photos/           ← full-size originals, OUTSIDE the repo (never commit)
 ```
 
 **Never** put content (text about her) inside layouts, includes, CSS or JS. Content
@@ -80,7 +107,8 @@ Layouts only render it.
 3. Be honest about status. If a project is planned or in progress, say so
    (`status: in-progress`) and do not describe planned features as working.
 4. English only. Short, active sentences. Bullets start with a past-tense verb
-   ("Built…", "Profiled…", "Led…"). "I" is used only in "What I did",
+   ("Built…", "Profiled…", "Led…"); an ongoing role may use present tense
+   ("Lead…", "Plan…"). "I" is used only in "What I did",
    "What I learned" and the About text.
 5. Numbers keep their original context (e.g. "~6.3× less per-frame data in the
    evaluated foreground-only scene", not "6× faster").
@@ -149,6 +177,48 @@ Layouts only render it.
 | Hero text                     | `_config.yml` → `owner.hero_lines` | max 3 lines, each ≤ 24 characters |
 | Photo or CV                   | `assets/img/home/portrait.jpg`, `assets/files/resume.pdf` + the path in `_config.yml` | portrait 4:5, < 400 KB |
 | Contact links                 | `_config.yml` → `owner.links`  | empty value = link hidden |
+
+### Copy-ready examples
+
+```yaml
+# _data/timeline.yml  (newest first; photos and links are optional)
+- year: "2026"
+  place: "Austin, Texas"
+  title: "Presenting at ACM MobiCom 2026, ImmerCom 2026"
+  text: "One or two sentences, max 30 words, facts from the owner only."
+  links:
+    - label: "Paper"            # external URL → opens in a new tab
+      url: "https://doi.org/10.1145/..."
+    - label: "Project"          # internal path → same tab
+      url: "/projects/text-to-3dgs-avatars/"
+  photos:
+    - src: "/assets/img/journey/mobicom-poster.jpg"
+      alt: "Nahathai presenting her research poster at ACM MobiCom 2026"
+
+# _data/experience.yml  (newest first; logo is optional)
+- kind: work                    # research | work | leadership
+  role: "Equity Analyst Intern"
+  org: "Syrius Systematica Ltd."
+  logo: "/assets/img/about/syrius-logo.png"
+  period: "Mar – Aug 2022"
+  place: "Hong Kong"
+  points:
+    - "Wrote monthly, weekly and daily technical analysis of U.S. and Chinese equities."
+    - "Produced quarterly fund factsheets and weekly risk/exposure reports."
+```
+
+### Adding a photo (recipe)
+
+1. Keep the owner's original in `../original-photos/` (outside the repo) and add
+   one line to its `README.txt`: `<original name> -> <path in assets/img>`.
+2. Convert HEIC to JPEG, rotate upright (EXIF), crop to the target ratio, resize:
+   portrait 4:5 at 800×1000 · project cover 16:9 at 1600×900 · Journey photo 3:4
+   at 750×1000 · logo square at 240×240 (PNG, trim white space).
+3. Re-save **without metadata** (removes GPS location). Stay under the size limits.
+4. Name files `<topic>-<detail>.jpg` in lowercase with hyphens, in the page's
+   folder (`assets/img/<page>/` or `assets/img/projects/<slug>/`).
+5. Write alt text that says who/what is in the photo; set the path in the data file.
+6. Look at the cropped result before committing; heads must not be cut off.
 
 ### Adding a new page
 A new full page (e.g. "Photography") needs the owner's approval. Then:
@@ -235,3 +305,27 @@ work, about, journey, research, stack.
 - Do not add analytics, trackers, cookies, or third-party embeds.
 - Do not delete the owner's content; if something looks outdated, ask.
 - Do not edit `AGENTS.md` unless the owner asks; propose changes instead.
+
+## 11. Reusing this system
+
+The rules are written so the same repo can grow or be copied:
+- **New content of an existing type** (project, milestone, job, link, photo):
+  one file edit following §5–§6, no code.
+- **New field** (like `links`, `photos`, `logo`, `poster` were added): make it
+  optional in the layout (`{% if x.field %}`), document it in §5/§6 and the
+  examples, and add it empty to `_projects/_template.md` if it is a project field.
+- **New page** (e.g. Photography, Talks): §6 "Adding a new page" — one HTML file
+  + one `_data/<name>.yml`, reusing `.tile` classes; no new CSS colors.
+- **Another person's portfolio:** keep layouts, CSS, JS and this file; replace
+  `_config.yml → owner`, the files in `_data/`, `_projects/` and `assets/img/`,
+  and update §1 and the URL in §2.
+
+## 12. Owner decisions (exceptions to the rules above)
+
+- Journey photos keep their original color (§7).
+- Two Journey titles exceed 40 characters at the owner's request
+  ("Presenting at ACM MobiCom 2026, ImmerCom 2026",
+  "Summer research intern on 3DGS compression").
+- Ongoing roles use present tense in bullets (§4.4).
+- The main contact email is `nahathai.wong@gmail.com`; the MobiCom poster PDF
+  shows the university email and is left as published.
